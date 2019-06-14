@@ -30,7 +30,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">fhiplot</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2019.3.21</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2019.6.14</span>
       </span>
     </div>
 
@@ -53,15 +53,15 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="articles/epicurves.html">Epicurves</a>
+    </li>
+    <li>
       <a href="articles/palettes.html">Palettes</a>
     </li>
     <li>
       <a href="articles/themes.html">Themes</a>
     </li>
   </ul>
-</li>
-<li>
-  <a href="news/index.html">Changelog</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
@@ -75,11 +75,28 @@
       
       </header><div class="row">
   <div class="contents col-md-9">
+
 <div id="fhiplot" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#fhiplot" class="anchor"></a>fhiplot</h1></div>
 <p>This repo contains the functions of the <code>fhiplot</code> package, which once installed locally, provides helpful functions for creating and exporting graphics made in ggplot in the style used by the Norwegian Institute of Public Health.</p>
 </div>
+<div id="installation" class="section level1">
+<h1 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h1>
+<p>You should include Folkehelseinstituttet’s drat repository as a default option for your computer. You can do this by installing the package <code>usethis</code> and then running the command:</p>
+<pre><code><a href="https://usethis.r-lib.org/reference/edit.html">usethis::edit_r_profile()</a></code></pre>
+<p>This will open a document called <code>.Rprofile</code>. Inside this document you will enter:</p>
+<pre><code><a href="https://www.rdocumentation.org/packages/base/topics/options">options(
+  repos = c(
+    folkehelseinstituttet = "https://folkehelseinstituttet.github.io/drat/",
+    CRAN = "https://cran.rstudio.com/"
+  )
+)</a></code></pre>
+<p>You will then save this file, close it, and restart RStudio. You can now install all FHI packages in the normal manner:</p>
+<pre><code>install.package("fhiplot")</code></pre>
+</div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

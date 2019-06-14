@@ -30,7 +30,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fhiplot</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2019.3.21</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2019.6.14</span>
       </span>
     </div>
 
@@ -53,15 +53,15 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="../articles/epicurves.html">Epicurves</a>
+    </li>
+    <li>
       <a href="../articles/palettes.html">Palettes</a>
     </li>
     <li>
       <a href="../articles/themes.html">Themes</a>
     </li>
   </ul>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
@@ -79,7 +79,7 @@
       <h1>Palettes</h1>
                         <h4 class="author">Author</h4>
             
-            <h4 class="date">2019-03-21</h4>
+            <h4 class="date">2019-06-14</h4>
       
       
       <div class="hidden name"><code>palettes.Rmd</code></div>
@@ -89,10 +89,15 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(fhiplot)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt; PACKAGE: fhiplot</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">#&gt; Version 2019.03.21 at 16:00</span></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt; Developed by Richard White, Norwegian Institute of Public Health</span></a></code></pre></div>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co">#&gt; Registered S3 methods overwritten by 'ggplot2':</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt;   method         from </span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">#&gt;   [.quosures     rlang</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt;   c.quosures     rlang</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt;   print.quosures rlang</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(fhiplot)</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt; PACKAGE: fhiplot</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt; Version 2019.06.14 at 06:28</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt; Developed by Richard White, Norwegian Institute of Public Health</span></a></code></pre></div>
 <div id="palette" class="section level2">
 <h2 class="hasAnchor">
 <a href="#palette" class="anchor"></a>Palette</h2>
@@ -102,9 +107,9 @@
 <div id="maps" class="section level2">
 <h2 class="hasAnchor">
 <a href="#maps" class="anchor"></a>Maps</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">pd &lt;-<span class="st"> </span>fhidata<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/fhidata/topics/get_data">get_data</a></span>(<span class="st">"norway_map_counties"</span>)</a>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">pd &lt;-<span class="st"> </span>fhidata<span class="op">::</span>norway_map_counties</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(pd[,<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"location_code"</span>)])</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/warning">suppressWarnings</a></span>(data[,category<span class="op">:</span><span class="er">=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Good"</span>,<span class="st">"Normal"</span>,<span class="st">"Neutral"</span>,<span class="st">"Bad"</span>,<span class="st">"Very Bad"</span>),<span class="dt">each=</span><span class="dv">4</span>)])</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/warning">suppressWarnings</a></span>(data[,category<span class="op">:</span><span class="er">=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rep">rep</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Good"</span>,<span class="st">"Normal"</span>,<span class="st">"Neutral"</span>,<span class="st">"Bad"</span>,<span class="st">"Very Bad"</span>),<span class="dt">each=</span><span class="dv">4</span>)[<span class="dv">1</span><span class="op">:</span>.N]])</a>
 <a class="sourceLine" id="cb3-4" data-line-number="4">data[,category_with_missing<span class="op">:</span><span class="er">=</span>category]</a>
 <a class="sourceLine" id="cb3-5" data-line-number="5">data[<span class="dv">1</span>,category_with_missing<span class="op">:</span><span class="er">=</span><span class="st">"Missing"</span>]</a>
 <a class="sourceLine" id="cb3-6" data-line-number="6">data[,category<span class="op">:</span><span class="er">=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/factor">factor</a></span>(category,<span class="dt">levels=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Good"</span>,<span class="st">"Normal"</span>,<span class="st">"Neutral"</span>,<span class="st">"Bad"</span>,<span class="st">"Very Bad"</span>))]</a>
